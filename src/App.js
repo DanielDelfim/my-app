@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Vue from 'vue/dist/vue.js'
+import sayHello from './say_hello'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// var Vue = require('vue/dist/vue.common.js');
+// var app = new Vue({
+//     el: '#app',
+//     data: {
+//         message:'Hello Vue!'
+//     }
+// })
 
-export default App;
+const app = new Vue ({
+    el: '#app',
+    data:{
+        message: sayHello('IDW')
+    }
+})
